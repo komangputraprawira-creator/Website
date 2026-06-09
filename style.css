@@ -1,0 +1,258 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f7f9fc;
+  color: #222;
+}
+
+/* HERO - BACKGROUND BARU SUDAH DIPASANG DI SINI */
+.hero {
+  min-height: 75vh;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), /* Overlay gelap ditingkatkan agar teks putih makin menyala */
+    url(https://i.ibb.co.com/ch2CBqhL/Whats-App-Image-2026-06-09-at-08-15-39-1.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: row; /* Membuat logo dan teks berjejer ke samping di layar laptop */
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+/* Kotak Putih untuk Logo */
+.logo-box {
+  background: white;
+  padding: 15px;
+  border-radius: 20px;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  flex-shrink: 0;
+}
+
+.logo-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Teks Putih Tropical di Samping Logo */
+.hero-text {
+  text-align: left; /* Teks rata kiri di layar besar */
+  color: #ffffff;
+}
+
+.hero h1 {
+  font-size: 42px;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero p {
+  color: #e0e0e0;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.hero-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 28px;
+  background: white;
+  color: #111;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+/* SECTION */
+.section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: -80px; /* Membuat kotak statistik agak naik menimpa hero */
+  position: relative;
+  z-index: 10;
+}
+
+.stat {
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+.stat h2 {
+  font-size: 36px;
+  color: #111;
+}
+
+/* CALENDAR */
+.month-title {
+  font-size: 28px;
+  margin: 50px 0 20px;
+  border-left: 5px solid #111;
+  padding-left: 12px;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.logo {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 60px;
+  background: white;
+  padding: 6px;
+  border-radius: 10px;
+}
+
+.content {
+  padding: 20px;
+}
+
+.date {
+  font-size: 13px;
+  color: #888;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 8px 0;
+}
+
+.location {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.wa {
+  background: #25D366;
+  color: white;
+}
+
+.map {
+  background: #111;
+  color: white;
+}
+
+/* FLOAT WA */
+.float-wa {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: #25D366;
+  color: white;
+  padding: 14px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 10px 20px rgba(0,0,0,.25);
+  z-index: 999;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 60px;
+}
+
+/* RESPONSIVE UNTUK HP (Otomatis Susun Vertikal jika layar kecil) */
+@media(max-width: 768px){
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-text {
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 32px;
+  }
+}
